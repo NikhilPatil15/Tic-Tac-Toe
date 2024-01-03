@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Ubuntu&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+body{
+    height: 100vh;
+}
+.head{
+    text-align: center;
+}
+span{
+    color:#212121;
+    font-weight:bold;
+    font-size: 50px;
+    border-radius: 11px;
+}
+.container{
+    height: 80vh;
+    margin:2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    flex-direction: column;
+    position: relative;
+}
+.cellContainer{
+    height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(3,150px);
+}
+.cell{
+    height: 20vmin;
+    background-color:#fff;
+    border:3px solid black;
+    font-size:8vmax;
+    text-align: center;
+    cursor: pointer;
+}
+.cell:hover{
+    filter: brightness(0.8);
+}
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3){
+    border-top: none;
+}
+.cell:nth-child(3n+1){
+    border-left: none;
+}
+.cell:nth-child(3n+3){
+    border-right: none;
+}
+.cell:last-child,
+.cell:nth-child(7),
+.cell:nth-child(8){
+    border-bottom: none;
+}
+
+.reset,.newGame{
+    margin-top: 3rem;
+    width:100px;
+    height: 50px;
+    border: none;
+    border-radius: 11px;
+    background-color:#212121;
+    color: #fff;
+    font-weight: bold;
+}
+.displayMessage{
+    margin:10rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+.message{
+    color: #212121
+} 
+.show{
+   display: none;
+}
